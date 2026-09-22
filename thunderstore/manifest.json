@@ -1,0 +1,9 @@
+{
+  "name": "CoolCount",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/jumpingmushroom/CoolCount",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2350"
+  ],
+  "description": "OmniCC for Valheim: a countdown, radial sweep and dimmed icon on every mead and food you cannot use yet, in the inventory, chests and hotbar. Client-side."
+}
