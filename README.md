@@ -16,6 +16,23 @@ Thunderstore Mod Manager).
 
 Requires BepInEx 5. Nothing else: no Jotunn, no server-side plugin.
 
+## Screenshots
+
+**In the bag.** The mead you just drank from, and how long before you can drink another.
+
+![Inventory](docs/images/inventory.jpg)
+
+**In the chest.** Three meads on the shelf, and only the one you cannot drink is counting down.
+The frost and poison resistance beside it are in other exclusion groups, so they stay clear.
+
+![Chest](docs/images/chest.jpg)
+
+**Food and mead together.** Bound slots, with the sweep showing how much is left: two berries
+most of the way to being edible again, and a mead with most of its cooldown still to run.
+Yellow under a minute, white above.
+
+![Quick slots](docs/images/quickslots.jpg)
+
 ## What it does
 
 **Meads**, and anything else that applies a status effect when you consume it. The game refuses
