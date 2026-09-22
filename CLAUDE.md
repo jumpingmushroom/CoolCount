@@ -26,5 +26,9 @@
   <name> <geometry>` crops a capture into a release JPEG by shipping it to the rig, which has
   ImageMagick, and back. Committed release images are cropped JPEGs; raw `probe*.png` captures
   are gitignored (a full ultrawide frame is ~6 MB).
+- **Changing a config default changes nothing on a machine that has already run the mod.**
+  BepInEx writes every setting to `BepInEx/config/com.jumpingmushroom.coolcount.cfg` on first
+  run and that file then wins over the code. After changing a default, delete that file in the
+  rig's profile (or edit the value) before testing, or the old value is silently kept.
 - Design and the decompiled-code findings it rests on: `PLAN.md`. Read it before changing where
   cooldowns are read from or how slots are painted.
