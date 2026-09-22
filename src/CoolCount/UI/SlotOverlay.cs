@@ -131,7 +131,8 @@ namespace CoolCount.UI
                 }
             }
 
-            if (PluginConfig.DimIcon.Value && _icon != null)
+            // With no end there is neither sweep nor countdown, so the tint is the only signal.
+            if ((PluginConfig.DimIcon.Value || infinite) && _icon != null)
             {
                 _icon.color = PluginConfig.DimColor.Value;
                 _dimmed = true;

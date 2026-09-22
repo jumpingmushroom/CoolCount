@@ -2,8 +2,10 @@
 
 ## 0.1.0 — first cut
 
-- Countdown, radial sweep and dimmed icon on meads and food in the inventory grid, container
-  grids and hotbar.
+- Countdown and radial sweep on meads and food in the inventory grid, container grids and
+  hotbar. Icon dimming is available but off: the sweep already darkens the icon, and doing both
+  makes the item unrecognisable. An item blocked by an effect with no end is dimmed instead,
+  having no sweep or countdown to show.
 - Meads follow the game's own rule: an item must be a Consumable (so mead *bases*, which carry
   the same effect field, are left alone), then it is blocked while the consume effect or any
   effect in its exclusion group runs. Food counts down to the half-way point where it can be eaten again,

@@ -5,5 +5,5 @@
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2350"
   ],
-  "description": "OmniCC for Valheim: a countdown, radial sweep and dimmed icon on every mead and food you cannot use yet, in the inventory, chests and hotbar. Client-side."
+  "description": "OmniCC for Valheim: a countdown and a radial sweep on every mead and food you cannot use yet, in the inventory, chests and hotbar. Client-side."
 }

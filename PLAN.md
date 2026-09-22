@@ -107,7 +107,10 @@ Cheap: one dictionary lookup per slot per frame; no networking, purely client-si
   the dark region shrinks clockwise like WoW's) over a 4x4 white sprite created at runtime, and
   `time`, an `Instantiate` of the slot's own `m_amount` TMP label so font, material and outline
   match. Both have `raycastTarget = false`. Dimming writes `m_icon.color` and restores white on
-  hide; the inventory grid rewrites that colour every frame anyway, the hotbar never does.
+  hide; the inventory grid rewrites that colour every frame anyway, the hotbar never does. It is
+  off by default: the sweep and the dim multiply, and both together put a fresh cooldown at
+  roughly 18% brightness, which hides *which* item is blocked (seen in testing, 2026-09-22).
+  An infinite cooldown dims regardless, having no sweep or countdown to show.
 - **`Patches/SlotPatches.cs`**: postfixes on `InventoryGrid.UpdateGui(Player, ItemData)` and
   `HotkeyBar.UpdateIcons(Player)`. Each clears overlays on elements the game marked unused,
   then walks the same item list the game just drew (`m_inventory.GetAllItems()` /

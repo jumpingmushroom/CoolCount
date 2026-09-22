@@ -114,8 +114,13 @@ namespace CoolCount
             HoursColor = cfg.Bind("Text", "HoursColor", new Color(0.75f, 0.75f, 0.75f, 1f),
                 new ConfigDescription("Colour from one hour up.", null, Attr(46)));
 
-            DimIcon = cfg.Bind("Icon", "Dim", true,
-                new ConfigDescription("Darken the item icon while it is on cooldown.", null, Attr(40)));
+            DimIcon = cfg.Bind("Icon", "Dim", false,
+                new ConfigDescription(
+                    "Darken the whole item icon on top of the sweep. Off by default: the sweep " +
+                    "already darkens the part of the cooldown still to run, and dimming as well " +
+                    "leaves the icon too dark to recognise. An item blocked by an effect with no " +
+                    "end is always dimmed, since there is no sweep or countdown to show.",
+                    null, Attr(40)));
 
             DimColor = cfg.Bind("Icon", "DimColor", new Color(0.45f, 0.45f, 0.45f, 1f),
                 new ConfigDescription("Tint applied to a dimmed icon.", null, Attr(38)));
@@ -123,7 +128,7 @@ namespace CoolCount
             Sweep = cfg.Bind("Icon", "Sweep", true,
                 new ConfigDescription("Draw the radial sweep that shrinks clockwise as the cooldown runs out.", null, Attr(36)));
 
-            SweepColor = cfg.Bind("Icon", "SweepColor", new Color(0f, 0f, 0f, 0.6f),
+            SweepColor = cfg.Bind("Icon", "SweepColor", new Color(0f, 0f, 0f, 0.5f),
                 new ConfigDescription("Colour and opacity of the sweep.", null, Attr(34)));
 
             Verbose = cfg.Bind("Logging", "Verbose", false,

@@ -1,8 +1,8 @@
 # CoolCount
 
 A client-side Valheim mod that puts the cooldown on the item. Every mead and every food you
-cannot use yet gets a **countdown, a radial sweep and a dimmed icon** on its own slot, in your
-inventory, in chests and on the hotbar.
+cannot use yet gets a **countdown and a radial sweep** on its own slot, in your inventory, in
+chests and on the hotbar.
 
 It is OmniCC for Valheim: the game already tells you a mead is running, in a small icon in the
 corner, but it never tells you *which bottles in your bag that blocks*. This does, on the bottle.
@@ -31,8 +31,8 @@ past half, every other food in the bag counts down to the moment the first slot 
 **Chests, carts and ships** show the same numbers, measured against your own active effects: a
 mead in a chest tells you when you could drink it, not when someone could.
 
-The overlay is drawn inside the game's own slot: a sweep that shrinks clockwise as the cooldown
-runs out, and a countdown in the game's own font, taken from the slot's stack-count label so the
+The overlay is drawn inside the game's own slot: a sweep that darkens the part of the cooldown
+still to run and shrinks clockwise as it does, and a countdown in the game's own font, taken from the slot's stack-count label so the
 face, material and outline match. Neither catches the mouse, so clicking, dragging, splitting
 and hovering work exactly as before.
 
@@ -46,7 +46,9 @@ and hovering work exactly as before.
 - **Text** — `FontSize`. `Format` is `Game` (`1:59`, matching the status icons) or `Compact`
   (`2m`, matching OmniCC). `TenthsBelow` shows `4.3` under the last few seconds. Separate
   colours for Soon, Seconds, Minutes and Hours.
-- **Icon** — `Dim` and `DimColor` for the icon tint, `Sweep` and `SweepColor` for the radial.
+- **Icon** — `Sweep` and `SweepColor` for the radial. `Dim` darkens the whole icon on top of
+  the sweep; it is off by default, because doing both leaves the icon too dark to recognise,
+  and knowing *which* bottle is blocked is the point.
 
 ## Console
 
