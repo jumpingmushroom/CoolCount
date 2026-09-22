@@ -22,5 +22,9 @@
   only, and `ConfigurationManagerAttributes` is declared locally.
 - `./build/logs.sh` fetches CoolCount lines from the rig's BepInEx log; console commands mirror
   their output there. `./build/shot.sh <name>` captures the game window into `docs/images/`.
+- The build box has no image tooling at all: no ImageMagick, no PIL. `./build/crop.sh <source>
+  <name> <geometry>` crops a capture into a release JPEG by shipping it to the rig, which has
+  ImageMagick, and back. Committed release images are cropped JPEGs; raw `probe*.png` captures
+  are gitignored (a full ultrawide frame is ~6 MB).
 - Design and the decompiled-code findings it rests on: `PLAN.md`. Read it before changing where
   cooldowns are read from or how slots are painted.
