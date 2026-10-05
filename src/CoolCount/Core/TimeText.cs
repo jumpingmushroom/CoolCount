@@ -17,11 +17,13 @@ namespace CoolCount.Core
             if (PluginConfig.Format.Value == TimeFormat.Game)
                 return StatusEffect.GetTimeString(seconds);
 
+            // Branch on the rounded minutes, not the raw seconds, or 59.5m and up would read "60m".
             int s = Mathf.CeilToInt(seconds);
-            if (s >= 3600)
+            int m = Mathf.RoundToInt(seconds / 60f);
+            if (m >= 60)
                 return Mathf.RoundToInt(seconds / 3600f) + "h";
             if (s >= 60)
-                return Mathf.RoundToInt(seconds / 60f) + "m";
+                return m + "m";
             return s.ToString();
         }
 
